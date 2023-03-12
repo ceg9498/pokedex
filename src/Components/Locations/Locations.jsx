@@ -48,7 +48,9 @@ function processLocations(locations, targets) {
 			if (targets.includes(ver.version.name)) {
 				versions.add(ver.version.name);
 				let locName = capitalize(loc.location_area.name.substring(0, loc.location_area.name.length-5));
-				locByVersion[ver.version.name] ? locByVersion[ver.version.name].push(locName) : locByVersion[ver.version.name] = [locName];
+				locByVersion[ver.version.name] ?
+					locByVersion[ver.version.name].push(locName) :
+					locByVersion[ver.version.name] = [locName];
 			}
 		});
 	});
