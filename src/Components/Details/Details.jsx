@@ -1,5 +1,6 @@
 import "./Details.css";
 import { Type } from "../index";
+import { capitalize } from "../../Utilities";
 
 const TARGET = 2;
 
@@ -30,12 +31,6 @@ export default function Details(props) {
   );
 }
 
-function prettify(str) {
-  str = str.replace('-', ' ');
-  str = str.substr(0, 1).toUpperCase() + str.substr(1);
-  return str;
-}
-
 function processMoves(moves, machines) {
   let processedMoves = [];
   moves.forEach(move => {
@@ -53,7 +48,7 @@ function processMoves(moves, machines) {
     if (games.length === 0 || methods.length === 0) return {};
 
     processedMoves.push({
-      name: prettify(move.move.name),
+      name: capitalize(move.move.name),
       games: games.join(''),
       methods: methods.join(', ')
     });
@@ -138,7 +133,7 @@ function handleMethod(method, moveName, machines) {
     case 'level-up':
       methodText = `Level Up (${method.level_learned_at})`;
       break;
-    case 'machine': 
+    case 'machine':
       machines.forEach(machine => {
         if (moveName === machine.move) {
           methodText = machine.id.toUpperCase();
