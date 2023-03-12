@@ -1,0 +1,8 @@
+ul {
+	list-style: none;
+	margin: 5px 0;
+	padding-left: 10px;
+}
+ul li::before {
+	content: "- ";
+}

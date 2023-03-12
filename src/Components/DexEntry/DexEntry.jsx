@@ -19,11 +19,10 @@ export default function DexEntry(props) {
         onMouseEnter={()=>hoverHandler(name)}
         onClick={() => {
           if (viewing) {
-            setViewing(null)
+            setViewing(null);
           } else {
-            api.getPokemonByName(name).then(res => {
-              setViewing(res);
-              console.log(res);
+            api.getPokemonByName(name).then(pokemon => {
+              setViewing(pokemon);
             }).catch(e => {
               console.error("[ERROR]",e);
             });
@@ -33,7 +32,7 @@ export default function DexEntry(props) {
         <span className="number">#{number}</span>
         <span className="name">{capitalize(name)}</span>
       </div>
-      {viewing && <Details name={capitalize(name)} mon={viewing} machines={machines} />}
+      {viewing && <Details name={capitalize(name)} mon={viewing} machines={machines} api={api} />}
     </div>
   );
 }
