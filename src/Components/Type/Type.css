@@ -1,0 +1,24 @@
+.type {
+  font-size: .5em;
+  color: rgb(228, 228, 228);
+  padding: 1px 3px;
+  margin: 2px;
+  border-radius: 2px;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.fire {
+  background-color: rgb(255, 0, 0);
+}
+.grass {
+  background-color: rgb(0, 129, 22);
+}
+.bug {
+  background-color: rgb(113, 177, 61);
+}
+.poison {
+  background-color: rgb(105, 64, 121);
+}
+.ghost {
+  background-color: rgb(61, 48, 177);
+}

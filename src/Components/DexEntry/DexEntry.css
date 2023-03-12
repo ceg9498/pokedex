@@ -1,0 +1,29 @@
+.pokedex-entry {
+  display: block;
+}
+
+.name-tile {
+  border-radius: 5px;
+  border: 1px solid #444;
+  margin: 5px;
+  display: inline-block;
+}
+
+.name-tile:hover {
+  cursor: pointer;
+}
+
+.name-tile > span {
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.name-tile > .number {
+  border-radius: 5px 0 0 5px;
+  border-right: 1px solid #444;
+  background-color: rgb(31, 31, 31);
+}
+
+.name-tile > .name {
+  background-color: transparent;
+}

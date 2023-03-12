@@ -1,0 +1,23 @@
+.details {
+  border-radius: 10px;
+  background-color: #373c47;
+  padding: 10px;
+  width: 100%;
+  font-size: .65em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table > thead {
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: #2b303a;
+}
+
+td {
+  padding: 5px;
+}
